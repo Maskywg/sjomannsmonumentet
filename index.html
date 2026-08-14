@@ -276,6 +276,45 @@ footer .credit{margin-top:1.6rem;opacity:.55;font-size:.78rem;}
   section{padding:3rem 1rem;}
   .century-body{padding:1.4rem 1.2rem 1.6rem;}
 }
+
+/* Music player */
+.music-player{
+  position:fixed;
+  right:1.2rem;
+  bottom:1.2rem;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  background:rgba(31,59,77,.92);
+  backdrop-filter:blur(6px);
+  color:#f4efe6;
+  padding:.55rem .9rem .55rem .55rem;
+  border-radius:30px;
+  box-shadow:0 6px 22px rgba(0,0,0,.35);
+  font-size:.8rem;
+  letter-spacing:.03em;
+  border:1px solid rgba(184,118,62,.5);
+}
+.music-player button{
+  width:38px;height:38px;
+  flex:0 0 auto;
+  border:none;
+  border-radius:50%;
+  background:var(--accent);
+  color:#2b2622;
+  font-size:1rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform .15s;
+}
+.music-player button:hover{transform:scale(1.08);}
+.music-player .label{opacity:.85;white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis;}
+@media (max-width:600px){
+  .music-player .label{max-width:90px;}
+}
 </style>
 </head>
 <body>
@@ -507,6 +546,36 @@ footer .credit{margin-top:1.6rem;opacity:.55;font-size:.78rem;}
   <p>資料來源：挪威語維基百科 Sjømannsmonumentet (Bergen) 詞條、卑爾根市檔案館 Bergen byleksikon、公開歷史資料彙整；現場照片為使用者實地拍攝。</p>
   <div class="credit">本頁為旅遊行程延伸介紹網頁，非官方網站。</div>
 </footer>
+
+<div class="music-player">
+  <button id="musicToggle" aria-label="播放／暫停背景音樂">▶</button>
+  <span class="label">Monument of the Sailors</span>
+  <audio id="bgMusic" src="audio/monument-of-the-sailors.mp3" loop preload="auto"></audio>
+</div>
+<script>
+(function(){
+  var audio = document.getElementById('bgMusic');
+  var btn = document.getElementById('musicToggle');
+  function setPlaying(isPlaying){
+    btn.textContent = isPlaying ? '❚❚' : '▶';
+  }
+  audio.play().then(function(){
+    setPlaying(true);
+  }).catch(function(){
+    setPlaying(false);
+  });
+  btn.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(function(){ setPlaying(true); });
+    } else {
+      audio.pause();
+      setPlaying(false);
+    }
+  });
+  audio.addEventListener('play', function(){ setPlaying(true); });
+  audio.addEventListener('pause', function(){ setPlaying(false); });
+})();
+</script>
 
 </body>
 </html>
