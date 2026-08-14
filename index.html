@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水手紀念碑 Sjømannsmonumentet｜卑爾根托爾格廣場的青銅航海史詩</title>
+<meta name="description" content="卑爾根 Torgallmenningen 廣場水手紀念碑（Sjømannsmonumentet）完整介紹：雕塑家 Dyre Vaa、1917 年悲劇起源、四個世紀十二尊青銅水手像與八幅浮雕全解析。">
+<style>
+:root{
+  --bronze:#4f7a6b;
+  --bronze-dark:#2e4a41;
+  --granite:#6b6560;
+  --granite-dark:#3a3632;
+  --cream:#f4efe6;
+  --paper:#fbf8f2;
+  --ink:#2b2622;
+  --accent:#b8763e;
+  --sea:#1f3b4d;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Noto Serif TC","PMingLiU","Georgia",serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.9;
+}
+img{max-width:100%;display:block;}
+a{color:var(--accent);}
+
+/* Hero */
+.hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#f4efe6;
+  background:
+    linear-gradient(180deg, rgba(20,25,28,.35), rgba(15,20,22,.75) 60%, var(--ink) 100%),
+    url('images/panel-20th-oil.jpg') center 20%/cover no-repeat;
+  padding:2rem 1.2rem 4rem;
+}
+.hero .eyebrow{
+  letter-spacing:.35em;
+  font-size:.78rem;
+  text-transform:uppercase;
+  opacity:.85;
+  margin-bottom:1.2rem;
+}
+.hero h1{
+  font-size:clamp(2rem, 5.5vw, 3.6rem);
+  font-weight:700;
+  letter-spacing:.05em;
+  margin-bottom:.6rem;
+  text-shadow:0 2px 18px rgba(0,0,0,.5);
+}
+.hero .sub-no{
+  font-size:clamp(1rem,2.6vw,1.35rem);
+  opacity:.9;
+  font-style:italic;
+  margin-bottom:1.8rem;
+  letter-spacing:.03em;
+}
+.hero .tagline{
+  max-width:640px;
+  font-size:1.05rem;
+  opacity:.92;
+}
+.hero .scroll-hint{
+  margin-top:3rem;
+  font-size:.85rem;
+  opacity:.7;
+  letter-spacing:.2em;
+}
+
+/* Nav */
+.toc{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(43,38,34,.94);
+  backdrop-filter:blur(6px);
+  color:#f4efe6;
+  overflow-x:auto;
+  white-space:nowrap;
+  padding:.7rem 1rem;
+  border-bottom:1px solid rgba(184,118,62,.4);
+}
+.toc a{
+  color:#e8e0d2;
+  text-decoration:none;
+  font-size:.85rem;
+  letter-spacing:.05em;
+  margin:0 1rem;
+  opacity:.8;
+  transition:opacity .2s, color .2s;
+}
+.toc a:hover{opacity:1;color:var(--accent);}
+
+/* Sections */
+section{
+  max-width:900px;
+  margin:0 auto;
+  padding:4.5rem 1.4rem;
+}
+section.wide{max-width:1100px;}
+.section-tag{
+  font-size:.78rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:.8rem;
+}
+h2{
+  font-size:clamp(1.5rem,3.6vw,2.1rem);
+  color:var(--sea);
+  margin-bottom:1.6rem;
+  border-bottom:2px solid var(--bronze);
+  display:inline-block;
+  padding-bottom:.4rem;
+}
+h3{
+  font-size:1.2rem;
+  color:var(--bronze-dark);
+  margin:1.6rem 0 .7rem;
+}
+p{margin-bottom:1.1rem;font-size:1.02rem;}
+.lede{font-size:1.15rem;color:#40372e;}
+
+/* Info grid */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1rem;
+  margin:2rem 0;
+  background:var(--cream);
+  border:1px solid #ddd2be;
+  border-radius:10px;
+  padding:1.6rem;
+}
+.info-grid div{text-align:center;padding:.4rem;}
+.info-grid .label{font-size:.75rem;letter-spacing:.15em;color:#8a7e6a;text-transform:uppercase;margin-bottom:.3rem;}
+.info-grid .value{font-size:1.05rem;color:var(--sea);font-weight:600;}
+
+/* Timeline */
+.timeline{border-left:3px solid var(--bronze);margin:2rem 0 2rem 1rem;padding-left:1.8rem;}
+.timeline .item{position:relative;margin-bottom:1.8rem;}
+.timeline .item::before{
+  content:"";
+  position:absolute;
+  left:-2.42rem;
+  top:.3rem;
+  width:14px;height:14px;
+  background:var(--accent);
+  border-radius:50%;
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 2px var(--bronze);
+}
+.timeline .year{font-weight:700;color:var(--bronze-dark);font-size:1.05rem;}
+
+/* Century cards */
+.century-card{
+  background:var(--paper);
+  border:1px solid #ddd2be;
+  border-radius:14px;
+  overflow:hidden;
+  margin:3rem 0;
+  box-shadow:0 6px 24px rgba(43,38,34,.08);
+}
+.century-card figure{margin:0;position:relative;}
+.century-card img{width:100%;height:auto;}
+.century-card figcaption{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(0deg, rgba(20,20,18,.78), transparent);
+  color:#f4efe6;
+  padding:1rem 1.2rem .6rem;
+  font-size:.85rem;
+  letter-spacing:.05em;
+}
+.century-body{padding:1.8rem 1.8rem 2rem;}
+.century-head{
+  display:flex;
+  align-items:baseline;
+  gap:.8rem;
+  flex-wrap:wrap;
+  margin-bottom:.4rem;
+}
+.century-no{
+  font-size:.8rem;
+  background:var(--sea);
+  color:#f4efe6;
+  padding:.2rem .7rem;
+  border-radius:20px;
+  letter-spacing:.1em;
+}
+.century-title{font-size:1.3rem;color:var(--bronze-dark);font-weight:700;}
+.century-noh{font-style:italic;color:#8a7e6a;font-size:.95rem;}
+.figures-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1rem;
+  margin:1.2rem 0;
+}
+.figure-tile{
+  background:var(--cream);
+  border-left:4px solid var(--bronze);
+  padding:.8rem 1rem;
+  border-radius:0 8px 8px 0;
+}
+.figure-tile .who{font-weight:700;color:var(--sea);font-size:.95rem;margin-bottom:.2rem;}
+.figure-tile .what{font-size:.88rem;color:#57503f;}
+.relief-note{
+  background:#eee7d8;
+  border-radius:8px;
+  padding:1rem 1.2rem;
+  font-size:.92rem;
+  color:#57503f;
+  margin-top:1rem;
+}
+.relief-note b{color:var(--bronze-dark);}
+
+/* Quote / criticism */
+.quote-block{
+  background:var(--sea);
+  color:#eef2ee;
+  border-radius:12px;
+  padding:2rem;
+  margin:1.6rem 0;
+}
+.quote-block blockquote{
+  font-size:1.1rem;
+  font-style:italic;
+  margin-bottom:.6rem;
+  line-height:1.7;
+}
+.quote-block cite{font-size:.85rem;opacity:.75;font-style:normal;}
+.crit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem;}
+.crit-card{background:var(--cream);border-radius:10px;padding:1.2rem 1.4rem;border:1px solid #ddd2be;}
+.crit-card .name{font-weight:700;color:var(--bronze-dark);margin-bottom:.3rem;font-size:.95rem;}
+.crit-card p{font-size:.9rem;margin:0;color:#57503f;}
+
+/* Practical */
+.practical-box{
+  background:var(--cream);
+  border:1px solid #ddd2be;
+  border-radius:14px;
+  padding:2rem;
+  margin-top:1.5rem;
+}
+.practical-box ul{padding-left:1.3rem;}
+.practical-box li{margin-bottom:.6rem;font-size:.98rem;}
+
+/* Footer */
+footer{
+  background:var(--ink);
+  color:#cfc6b6;
+  text-align:center;
+  padding:3rem 1.4rem;
+  font-size:.88rem;
+}
+footer a{color:var(--accent);text-decoration:none;}
+footer .back-link{
+  display:inline-block;
+  margin-bottom:1.2rem;
+  padding:.6rem 1.4rem;
+  border:1px solid var(--accent);
+  border-radius:30px;
+  color:#f4efe6;
+}
+footer .credit{margin-top:1.6rem;opacity:.55;font-size:.78rem;}
+
+@media (max-width:600px){
+  section{padding:3rem 1rem;}
+  .century-body{padding:1.4rem 1.2rem 1.6rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Bergen · Torgallmenningen</div>
+  <h1>水手紀念碑</h1>
+  <div class="sub-no">Sjømannsmonumentet</div>
+  <p class="tagline">十二尊青銅水手，面向四方，橫跨一千年——從維京長船到石油輪機艙，這是挪威人寫給海洋與亡者的紀念碑。</p>
+  <div class="scroll-hint">↓ 向下捲動，走進四個世紀</div>
+</div>
+
+<nav class="toc">
+  <a href="#intro">總覽</a>
+  <a href="#history">起源與建造</a>
+  <a href="#sculptor">雕塑家 Dyre Vaa</a>
+  <a href="#c10">十世紀</a>
+  <a href="#c18">十八世紀</a>
+  <a href="#c19">十九世紀</a>
+  <a href="#c20">二十世紀</a>
+  <a href="#criticism">爭議與評價</a>
+  <a href="#visit">參觀資訊</a>
+</nav>
+
+<section id="intro">
+  <div class="section-tag">Overview</div>
+  <h2>廣場中央的青銅航海史</h2>
+  <p class="lede">走出卑爾根最熱鬧的購物大街 Torgallmenningen，會先看到一座七公尺高、方正如祭壇的花崗岩基座，四面都站著青銅水手。這不是某位英雄的紀念碑，而是一整個航海民族的自畫像——十二尊真人尺寸的水手雕像，加上八幅敘事浮雕，分成四組，各代表一個世紀：第十世紀（維京時代）、第十八世紀、第十九世紀、第二十世紀，分別朝向廣場的四個方向。</p>
+  <p>雕塑家 Dyre Vaa 把它取名為「幸運的考驗」（Lykkens prøve）——航海本身就是一場與命運的賭注。紀念碑於 1939 至 1945 年間陸續塑形，因二戰爆發而延宕多年，最終在 1950 年 6 月 7 日正式揭幕。</p>
+
+  <div class="info-grid">
+    <div><div class="label">雕塑家</div><div class="value">Dyre Vaa</div></div>
+    <div><div class="label">創作年代</div><div class="value">1939–1945</div></div>
+    <div><div class="label">揭幕日期</div><div class="value">1950.6.7</div></div>
+    <div><div class="label">高度</div><div class="value">約 7 公尺</div></div>
+    <div><div class="label">材質</div><div class="value">青銅＋花崗岩</div></div>
+    <div><div class="label">構成</div><div class="value">12 尊立像＋8 幅浮雕</div></div>
+    <div><div class="label">位置</div><div class="value">Torgallmenningen 廣場</div></div>
+    <div><div class="label">水池整修</div><div class="value">1999 年</div></div>
+  </div>
+</section>
+
+<section id="history" class="wide">
+  <div class="section-tag">Origin</div>
+  <h2>起源：一場葬送 439 條人命的春天</h2>
+  <p>紀念碑的構想不是憑空而來，而是源自一場真實的海難悲劇。1917 年，正值第一次世界大戰無限制潛艇戰最猛烈的時期，那年春天是挪威商船隊史上最慘烈的一段時間——短短數月間有多達 300 艘挪威船隻被擊沉，439 名海員葬身海底。卑爾根船東協會（Bergens Rederiforening）與卑爾根船長協會（Bergens Skipperforening）於是倡議，要為這些犧牲的海員立一座紀念碑。</p>
+  <p>隨著時間推移，紀念碑的主題從單純哀悼戰爭中犧牲的船員，擴大為禮讚整個挪威航海民族——從維京時代的長船水手，到二十世紀輪船上的水手與輪機工，都被納入同一座紀念碑的敘事之中。</p>
+
+  <div class="timeline">
+    <div class="item">
+      <div class="year">1917</div>
+      <p>卑爾根船東協會與船長協會提議建立紀念碑，起因是當年無限制潛艇戰造成的慘重船難。</p>
+    </div>
+    <div class="item">
+      <div class="year">1938</div>
+      <p>公開徵件競圖，共收到 45 件設計方案。年僅 30 多歲的雕塑家 Dyre Vaa 以作品「幸運的考驗」（Lykkens prøve）獲選。</p>
+    </div>
+    <div class="item">
+      <div class="year">1939–1945</div>
+      <p>Vaa 以泰勒馬克（Telemark）農民為模特兒,在戰爭期間陸續完成約 25 座石膏原型，但因二次大戰爆發，鑄造與建造工程一再延宕。</p>
+    </div>
+    <div class="item">
+      <div class="year">1950.6.7</div>
+      <p>紀念碑正式揭幕，由當時的挪威工業部長 Lars Evensen 主持典禮，經費全數來自公眾募款。</p>
+    </div>
+    <div class="item">
+      <div class="year">1999</div>
+      <p>卑爾根市政府整修 Torgallmenningen 廣場,在紀念碑基座周圍加建大片水池,讓青銅群像得以倒映水中——某種程度上回應了長年以來「紀念碑離海太遠」的批評。</p>
+    </div>
+  </div>
+</section>
+
+<section id="sculptor">
+  <div class="section-tag">The Sculptor</div>
+  <h2>雕塑家 Dyre Vaa（1903–1980）</h2>
+  <p>Dyre Vaa 出生於挪威泰勒馬克郡（Telemark）的克維特塞（Kviteseid），後來長居於勞蘭（Rauland），是二十世紀挪威最重要的雕塑家與畫家之一。他的創作生涯橫跨了兩次世界大戰,水手紀念碑正是他最具代表性、也最具野心的公共藝術計畫——用整整六年的時間，塑造出十二尊真人尺寸的水手與八幅敘事浮雕，濃縮挪威上千年的航海記憶。</p>
+  <p>特別值得一提的是，Vaa 並沒有用職業模特兒,而是找來家鄉泰勒馬克的農民擔任雕像的原型——粗獷、結實、帶著土地感的身形,或許正是他心目中挪威水手最真實的模樣。</p>
+</section>
+
+<section id="c10" class="wide">
+  <div class="section-tag">10th Century</div>
+  <h2>第一組：十世紀・維京遠航</h2>
+  <div class="century-card">
+    <figure>
+      <img src="images/panel-10th-viking.jpg" alt="水手紀念碑十世紀維京組雕像與浮雕，現場實拍">
+      <figcaption>現場實拍｜面板刻字「TIENDE ÅRHUNDRE」（第十世紀）</figcaption>
+    </figure>
+    <div class="century-body">
+      <div class="century-head">
+        <span class="century-no">10</span>
+        <span class="century-title">維京時代的出航者</span>
+        <span class="century-noh">TIENDE ÅRHUNDRE</span>
+      </div>
+      <p>最底層的三尊青銅像是整座紀念碑最古老的角色：一位手持長矛、頭戴尖盔的持矛戰士；中間是一位面容肅穆的女性（一說為代表維京社會中地位不低的女性角色，亦有解讀為吟遊詩人 skald）；右側則是頭戴角盔式頭盔、手持圓盾與劍的「狂戰士」（berserk）造型戰士，蓄著長鬚，姿態警戒。</p>
+      <div class="figures-row">
+        <div class="figure-tile"><div class="who">持矛戰士</div><div class="what">頭盔、長矛、腰間佩劍，典型維京武裝步兵形象</div></div>
+        <div class="figure-tile"><div class="who">中央女性像</div><div class="what">長袍束腰，神情沉靜，象徵維京時代的女性角色</div></div>
+        <div class="figure-tile"><div class="who">持盾狂戰士</div><div class="what">圓盾、長劍、絡腮鬍，維京戰士的兇悍代表</div></div>
+      </div>
+      <div class="relief-note">
+        <b>上層浮雕：</b>一艘滿載盾牌與船員的維京長船（drakkar）乘風破浪，船頭高翹、船帆鼓起——呼應維京人橫渡北大西洋的航海實力。<br><br>
+        <b>下層浮雕：</b>一根巨大的圖騰柱（totem pole）造型，柱頂是展翅的鷹形雕刻，柱前站著一列身著毛皮與異族服飾的人群。這幅畫面呼應的正是「文蘭傳說」（Vinland Sagas）——維京人在西元十世紀末、十一世紀初曾遠航至北美洲海岸（今紐芬蘭 L'Anse aux Meadows 一帶），與當地原住民相遇的歷史紀錄，是歐洲人已知最早抵達美洲大陸的紀錄，比哥倫布早了近五百年。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="c18" class="wide">
+  <div class="section-tag">18th Century</div>
+  <h2>第二組：十八世紀・格陵蘭與捕魚遠征</h2>
+  <div class="century-card">
+    <figure>
+      <img src="images/panel-18th-greenland.jpg" alt="水手紀念碑十八世紀組雕像與浮雕，現場實拍">
+      <figcaption>現場實拍｜面板刻字「ATTENDE ÅRHUNDRE」（第十八世紀）</figcaption>
+    </figure>
+    <div class="century-body">
+      <div class="century-head">
+        <span class="century-no">18</span>
+        <span class="century-title">漁夫、船長與少年水手</span>
+        <span class="century-noh">ATTENDE ÅRHUNDRE</span>
+      </div>
+      <p>左側漁夫舉手行禮致敬遠望；中間是頭戴三角帽（tricorn）、身形豐腴的船長，一手指向遠方、一手叉腰,是整組最具戲劇張力的姿態；右側是年輕水手,手按著腰間短刀,若有所思地仰望。三人合起來,講述的是十八世紀北大西洋漁業與捕鯨、探勘航線並存的時代。</p>
+      <div class="figures-row">
+        <div class="figure-tile"><div class="who">敬禮漁夫</div><div class="what">短衣束腰，舉手遮眉遠眺海面</div></div>
+        <div class="figure-tile"><div class="who">三角帽船長</div><div class="what">華麗船長服飾，伸手指揮的姿態，是三人中最醒目的角色</div></div>
+        <div class="figure-tile"><div class="who">佩刀少年水手</div><div class="what">手按短刀，神情若有所思，象徵新一代出海的年輕人</div></div>
+      </div>
+      <div class="relief-note">
+        <b>上層浮雕：</b>畫面左側是一幕耶穌受難的十字架場景，圍繞著跪地祈禱的人群；右側則是一艘揚著滿帆的大型帆船，中段還可見造船廠的鷹架與工匠身影。宗教信仰與造船工業並置,呼應十八世紀傳教士（如挪威／丹麥傳教士 Hans Egede 前往格陵蘭向因紐特人傳教）與航海探勘同步展開的歷史。<br><br>
+        <b>下層浮雕：</b>一艘船身傾覆、船帆扭曲下墜的沉船景象，四周環繞著一隻猙獰的海怪與哀悼的人群——男男女女身著十八世紀服飾（女性寬蓬裙、男性及膝馬褲），神情肅穆地見證這場海難。這正呼應了紀念碑最初的緣起：向海洋討生活,也向海洋獻上性命。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="c19" class="wide">
+  <div class="section-tag">19th Century</div>
+  <h2>第三組：十九世紀・穀物貿易與捕鯨</h2>
+  <div class="century-card">
+    <figure>
+      <img src="images/panel-19th-grain.jpg" alt="水手紀念碑十九世紀組雕像與浮雕，現場實拍">
+      <figcaption>現場實拍｜面板刻字「NITTENDE ÅRHUNDRE」（第十九世紀）</figcaption>
+    </figure>
+    <div class="century-body">
+      <div class="century-head">
+        <span class="century-no">19</span>
+        <span class="century-title">船東、水手與領港員</span>
+        <span class="century-noh">NITTENDE ÅRHUNDRE</span>
+      </div>
+      <p>左側是頭戴高禮帽、身穿燕尾西裝的紳士——代表這個世紀崛起的新角色：坐擁船隊的船東（skipsreder）；中間是雙手插腰、頭戴扁帽的年輕水手，姿態輕鬆自信；右側是身穿厚重大衣、雙手插入口袋、頭戴防風帽的領港員（los），面容嚴肅,常年與惡劣海象打交道的痕跡寫在臉上。三種身份並列,正是十九世紀挪威航運業從個體討海走向資本化船隊經營的縮影。</p>
+      <div class="figures-row">
+        <div class="figure-tile"><div class="who">高禮帽船東</div><div class="what">燕尾西裝、懷錶鍊，資本化航運時代的新興角色</div></div>
+        <div class="figure-tile"><div class="who">扁帽水手</div><div class="what">插腰而立，神情自若的一線船員</div></div>
+        <div class="figure-tile"><div class="who">領港員 Los</div><div class="what">厚重大衣、雙手插袋，熟悉沿岸水域的引水人</div></div>
+      </div>
+      <div class="relief-note">
+        <b>上層浮雕：</b>一頭巨大的鯨魚橫臥浪間，遠處一艘小艇上的船員正划槳追逐，背景則是一艘揚著多面帆的大型商船——同時呈現十九世紀的捕鯨業與遠洋貿易榮景。<br><br>
+        <b>下層浮雕：</b>畫面中央是一位頭戴新娘頭冠（brudekrone，挪威傳統婚禮飾品）、身著傳統服飾的女性，手持寫著「LYKKENS PRØVE」（幸運的考驗，正是本作品的原始命名）的緞帶，站立在船塢鷹架之間，兩側是正在打造船身的造船工人。這幅畫面把「造船」與「婚禮 / 命運」的意象疊在一起——每艘新船下水，都像一場與命運的婚約，充滿冒險與祝福。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="c20" class="wide">
+  <div class="section-tag">20th Century</div>
+  <h2>第四組：二十世紀・輪機時代與海難救援</h2>
+  <div class="century-card">
+    <figure>
+      <img src="images/panel-20th-oil.jpg" alt="水手紀念碑二十世紀組雕像與浮雕，現場實拍">
+      <figcaption>現場實拍｜面板刻字「TJUENDE ÅRHUNDRE」（第二十世紀）</figcaption>
+    </figure>
+    <div class="century-body">
+      <div class="century-head">
+        <span class="century-no">20</span>
+        <span class="century-title">甲板水手、船長與船公司代表</span>
+        <span class="century-noh">TJUENDE ÅRHUNDRE</span>
+      </div>
+      <p>左側是頭戴船員便帽、雙手垂放的甲板水手；中間是身穿雙排釦長大衣、胸前掛著望遠鏡、雙手叉腰的船長，姿態最具權威感；右側是西裝筆挺、繫著領帶的男子，代表航運公司或岸上事務的角色。三人合起來,勾勒出二十世紀機械化商船（蒸汽輪、油輪）時代裡,海上與岸上分工日益精細的航運體系。</p>
+      <div class="figures-row">
+        <div class="figure-tile"><div class="who">便帽甲板水手</div><div class="what">簡樸工作服，二十世紀商船最基層的船員</div></div>
+        <div class="figure-tile"><div class="who">大衣船長</div><div class="what">掛著望遠鏡，叉腰而立，權威感十足</div></div>
+        <div class="figure-tile"><div class="who">西裝革履者</div><div class="what">領帶西裝，代表航運公司或岸上管理角色</div></div>
+      </div>
+      <div class="relief-note">
+        <b>上層浮雕：</b>一艘冒著蒸汽、船身現代化的輪船破浪前行，海面上漂浮著一具溺水者的身軀——直接呼應了促成整座紀念碑誕生的起因：1917 年那場奪走 439 條人命的海難。<br><br>
+        <b>下層浮雕：</b>一列裸身男子手牽著手、彼此攙扶站立成排（象徵海難中互相救援、共同承擔命運的水手群像），右側則是一位飄然飛翔、衣袂翻飛的女性天使形象，張開雙臂彷彿要接住墜落或托起溺水者的靈魂——這是全紀念碑最富宗教與救贖意味的一幕，把冷冽的海難悲劇，昇華成一種近乎神話的告別儀式。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="criticism" class="wide">
+  <div class="section-tag">Reception</div>
+  <h2>爭議與評價：卑爾根人又愛又恨的地標</h2>
+  <p>水手紀念碑揭幕至今超過七十年,卻始終不是一座「人人稱頌」的紀念碑。它龐大方正的花崗岩量體，與周圍典雅的十九世紀街屋形成強烈對比，長年引來卑爾根本地藝文界的尖銳批評——但也正因為這份「愛恨交織」，讓它成為卑爾根人日常生活裡最難忽視的存在。</p>
+  <div class="quote-block">
+    <blockquote>「它就像一塊山羊起司，是卑爾根臉上一顆難看的疣。」</blockquote>
+    <cite>— Sverre Jordan，挪威作曲家</cite>
+  </div>
+  <div class="crit-grid">
+    <div class="crit-card">
+      <div class="name">建築師 Ole Landmark</div>
+      <p>稱這座紀念碑是一個「雕塑怪胎」（skulpturelt vidunder，帶貶義），批評其量體與周邊街景格格不入。</p>
+    </div>
+    <div class="crit-card">
+      <div class="name">藝術史學家 Alf Bøe</div>
+      <p>認為紀念碑「比例失調、設計乏味」，甚至建議應該把它遷移到較不顯眼的位置，避免持續佔據市中心最精華的廣場視野。</p>
+    </div>
+  </div>
+  <p style="margin-top:1.6rem;">儘管評價兩極,水手紀念碑依然穩穩地站在 Torgallmenningen 廣場中央將近八十年，成為卑爾根人約碰面、觀光客拍照打卡的地標。1999 年增建的水池，某種程度上也softened了這座巨大花崗岩量體的壓迫感——雨天時，青銅水手的身影倒映在水面上，反而多了幾分詩意。</p>
+</section>
+
+<section id="visit">
+  <div class="section-tag">Visit</div>
+  <h2>參觀資訊</h2>
+  <div class="practical-box">
+    <ul>
+      <li><b>位置：</b>Torgallmenningen 廣場東端，卑爾根市中心主要行人徒步街，步行可達漁市場（Fisketorget）與布呂根（Bryggen）世界遺產區。</li>
+      <li><b>開放時間：</b>戶外公共雕塑，全年全天開放，免費參觀。</li>
+      <li><b>建議路線：</b>沿著紀念碑基座繞行一圈，四面浮雕與雕像分屬四個世紀，順時針或逆時針走一圈即可看完全部十二尊像與八幅浮雕。</li>
+      <li><b>攝影建議：</b>陰雨天氣（卑爾根本就多雨）搭配 1999 年增建的水池倒影，是拍攝這座紀念碑最有氛圍的時刻。</li>
+      <li><b>周邊景點：</b>步行數分鐘即可抵達卑爾根魚市場、布呂根木造商館群，以及作曲家葛利格的故居 Troldhaugen（需另外搭車或參團前往）。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <a class="back-link" href="https://maskywg.github.io/northeurope/北歐四國" target="_blank" rel="noopener">← 回到「全覽北歐四國」主行程網頁</a>
+  <p>資料來源：挪威語維基百科 Sjømannsmonumentet (Bergen) 詞條、卑爾根市檔案館 Bergen byleksikon、公開歷史資料彙整；現場照片為使用者實地拍攝。</p>
+  <div class="credit">本頁為旅遊行程延伸介紹網頁，非官方網站。</div>
+</footer>
+
+</body>
+</html>
