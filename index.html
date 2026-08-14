@@ -315,6 +315,41 @@ footer .credit{margin-top:1.6rem;opacity:.55;font-size:.78rem;}
 @media (max-width:600px){
   .music-player .label{max-width:90px;}
 }
+
+/* Orbit video */
+.orbit-section{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1.4rem 4.5rem;
+}
+.orbit-frame{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 32px rgba(43,38,34,.18);
+  border:1px solid #ddd2be;
+}
+.orbit-frame video{width:100%;height:auto;display:block;}
+.orbit-caption{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:.4rem;
+  margin-top:.7rem;
+  font-size:.82rem;
+  color:#8a7e6a;
+  letter-spacing:.03em;
+}
+.orbit-caption .ai-tag{
+  background:var(--cream);
+  border:1px solid #ddd2be;
+  color:#8a7e6a;
+  padding:.15rem .6rem;
+  border-radius:20px;
+  font-size:.72rem;
+  letter-spacing:.1em;
+}
 </style>
 </head>
 <body>
@@ -356,6 +391,16 @@ footer .credit{margin-top:1.6rem;opacity:.55;font-size:.78rem;}
     <div><div class="label">水池整修</div><div class="value">1999 年</div></div>
   </div>
 </section>
+
+<div class="orbit-section">
+  <div class="orbit-frame">
+    <video src="video/camera-orbit.mp4" poster="video/camera-orbit-poster.jpg" autoplay muted loop playsinline></video>
+  </div>
+  <div class="orbit-caption">
+    <span>鏡頭緩緩環繞紀念碑一周，可依序看到四個世紀不同角面的浮雕與青銅群像</span>
+    <span class="ai-tag">AI 生成環景動畫</span>
+  </div>
+</div>
 
 <section id="history" class="wide">
   <div class="section-tag">Origin</div>
